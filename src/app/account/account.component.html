@@ -1,0 +1,28 @@
+<p class="fs-4 text-center">Meine Pflanzen</p>
+
+<div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-2">
+  <div *ngIf="myPlants$ | async as myplants; else noPlants" >
+    <div *ngIf="myplants.length > 0; else noPlants">
+      <div *ngFor="let plant of myplants" class="col">
+        <div class="card">
+          <div class="card-header">
+            {{ plant.name }}
+          </div>
+          <div class="card-body">
+            <p>{{ plant.lightRequirement }}</p>
+            <img
+              [src]="'assets/img/' + plant.imageName + '.jpg'"
+              alt="{{ plant.name }}"
+              class="card-img-bottom"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noPlants>
+  <p>Du hast noch keine Pflanzen hinzugefügt.</p>
+</ng-template>
+
+<p class="fs-4 text-center">TO DOs</p>

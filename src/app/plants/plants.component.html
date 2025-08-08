@@ -1,0 +1,18 @@
+
+ <p class="fs-4 text-center" >Pflanzen</p>
+
+<div class="container">
+   <div class="d-flex justify-content-center gap-3 my-3">
+      <button class="btn btn-secondary" (click)="filter='Zimmerpflanze'">Zimmerpflanzen</button>
+      <button class="btn btn-secondary" (click)="filter='Gartenpflanze'">Balkon-/Gartenpflanzen</button>
+   </div>
+
+  
+  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3">
+    <div *ngFor="let currentplant of getFilterProducts()" class="col">
+      <app-plantdetails  
+        [plant]="currentplant" 
+        (add)="addToAccount(currentplant)">
+      </app-plantdetails>
+    </div>
+</div>

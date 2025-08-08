@@ -1,0 +1,24 @@
+<div class="col">
+    <div class="card" style="width: 18rem; margin: 0.2rem;">
+            <img  class="" [src]="getImageUrl(plant)" [alt]="plant.name" (error)="onImgError($event)" />
+            <div class="card-body">
+                <div class="product-info">
+                    <h5 class="card-title">{{plant.name}}</h5>
+                    <p class="h7" style="font-weight: lighter; font-style: italic;"> {{plant.latin}}</p>   
+                    <p class="card-text">{{plant.description}}</p>
+
+                    <p class="card-text"> {{plant.category}}</p> 
+                    <p class="card-text"> {{plant.lightRequirement}}</p> 
+        
+                    <button class="btn" aria-readonly="true" [ngClass]="plant.edible ? 'btn-success' : 'btn-outline-secondary'" >
+                         {{ plant.edible ? 'essbar' : 'nicht essbar' }}
+                    </button>
+
+                     <button class="btn" aria-readonly="true" *ngIf="plant.category !== 'zimmerpflanze'" [ngClass]="plant.hardyInWinter ? 'btn-success' : 'btn-outline-secondary'" >
+                         {{ plant.hardyInWinter ? 'winterhart' : 'nicht winterhart' }}
+                    </button>
+
+                    <button class="btn btn-bd-primary" (click)="addButtonClicked(plant)">Zu meinen Pflanzen hinzufügen</button>
+            </div>
+    </div>
+</div>
