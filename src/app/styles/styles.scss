@@ -1,0 +1,9 @@
+@import './colors';
+@import './variables';
+
+.fixed-image {
+  height: 200px; 
+  object-fit: cover;  
+  width: 100%;
+}
+
