@@ -5,5 +5,16 @@
   height: 200px; 
   object-fit: cover;  
   width: 100%;
+  vertical-align: middle;
 }
 
+
+.btn-bd-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-bg: $primary;
+  --bs-btn-border-color: $primary;
+  --bs-btn-hover-bg: #{shade-color($primary, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($primary, 10%)};
+  --bs-btn-active-bg: #{shade-color($primary, 20%)};
+  --bs-btn-active-border-color: #{shade-color($primary, 20%)};
+}

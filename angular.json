@@ -30,9 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/app/styles/styles.scss",
-              "src/app/styles/colors.scss",
-              "src/app/styles/variables.scss"
+               "src/styles.scss"
             ],
             "scripts": []
           },
@@ -95,7 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/app/styles/styles.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           }
