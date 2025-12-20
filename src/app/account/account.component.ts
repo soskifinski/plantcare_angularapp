@@ -14,4 +14,9 @@ export class AccountComponent {
   constructor(private accountservice: AccountService) {
     this.myPlants$ = this.accountservice.myPlants$;
   }
+
+  onImgError(event: Event): void {
+  const element = event.target as HTMLImageElement;
+  element.src = 'assets/img/default.jpg';
+}
 }
