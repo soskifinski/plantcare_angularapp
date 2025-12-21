@@ -1,24 +1,78 @@
 <div class="col">
-    <div class="card" style="width: 18rem; margin: 0.2rem;">
-            <img  class="" [src]="getImageUrl(plant)" [alt]="plant.name" (error)="onImgError($event)" />
-            <div class="card-body">
-                <div class="product-info">
-                    <h5 class="card-title">{{plant.name}}</h5>
-                    <p class="h7" style="font-weight: lighter; font-style: italic;"> {{plant.latin}}</p>   
-                    <p class="card-text">{{plant.description}}</p>
+  <div class="card" style="width: 18rem; margin: 0.2rem">
+    <img
+      class=""
+      style="height: 180px; width: auto; object-fit: cover"
+      [src]="getImageUrl(plant)"
+      [alt]="plant.name"
+      (error)="onImgError($event)"
+    />
+    <div class="card-body">
+      <div class="product-info">
+        <h5 class="card-title">{{ plant.name }}</h5>
+        <p class="h7" style="font-weight: lighter; font-style: italic">
+          {{ plant.latin }}
+        </p>
+        <p class="card-text" style="height: 80px">{{ plant.description }}</p>
 
-                    <p class="card-text"> {{plant.category}}</p> 
-                    <p class="card-text"> {{plant.lightRequirement}}</p> 
-        
-                    <button class="btn" aria-readonly="true" [ngClass]="plant.edible ? 'btn-success' : 'btn-outline-secondary'" >
-                         {{ plant.edible ? 'essbar' : 'nicht essbar' }}
-                    </button>
+        <div class="d-flex align-items-center gap-2 mb-2">
+          <p class="card-text">{{ plant.category }}</p>
+          <div class="card-text">
+            <span
+              class="material-symbols-outlined"
+              *ngIf="
+                (plant.lightRequirement || '').toLowerCase().includes('sonnig')
+              "
+            >
+              sunny
+            </span>
 
-                     <button class="btn" aria-readonly="true" *ngIf="plant.category !== 'zimmerpflanze'" [ngClass]="plant.hardyInWinter ? 'btn-success' : 'btn-outline-secondary'" >
-                         {{ plant.hardyInWinter ? 'winterhart' : 'nicht winterhart' }}
-                    </button>
+            <span
+              class="material-symbols-outlined"
+              *ngIf="
+                (plant.lightRequirement || '')
+                  .toLowerCase()
+                  .includes('halbschattig')
+              "
+            >
+              partly_cloudy_day
+            </span>
 
-                    <button class="btn btn-bd-primary" (click)="addButtonClicked(plant)">Zu meinen Pflanzen hinzufügen</button>
-            </div>
+            <span
+              class="material-symbols-outlined"
+              *ngIf="(plant.lightRequirement || '').toLowerCase() == 'schattig'"
+            >
+              cloud
+            </span>
+          </div>
+          <div
+            class="card-text"
+            disabled
+            *ngIf="!plant.category.toLowerCase()?.includes('zimmerpflanze')"
+          >
+            <span class="material-symbols-outlined" *ngIf="plant.edible"
+              >fork_spoon</span
+            >
+            <span class="material-symbols-outlined" *ngIf="!plant.edible"
+              >no_meals</span
+            >
+            <span
+              class="material-symbols-outlined"
+              *ngIf="plant.hardyInWinter"
+            >
+              ac_unit
+            </span>
+          </div>
+        </div>
+
+        <button
+          class="btn btn-outline-secondary mt-2 d-flex gap-2 hover-btn"
+          (click)="addButtonClicked(plant)"
+        >
+          <span class="material-symbols-outlined">add</span>
+          <span class="btn-text">Zu meinen Pflanzen hinzufügen</span>
+        </button>
+      </div>
     </div>
+  </div>
 </div>

@@ -1,5 +1,13 @@
 @import './colors';
 
+//Images
+.fixed-image {
+  height: 200px; 
+  object-fit: cover;  
+  width: 100%;
+  vertical-align: middle;
+}
+
 //Text
 .description {
   display: -webkit-box;
@@ -9,5 +17,31 @@
   text-overflow: ellipsis;
   height: 4.5em;
 }
+
+
+//Buttons
+.btn-bd-primary {
+  --bs-btn-font-weight: 600;
+  --bs-btn-bg: $primary;
+  --bs-btn-border-color: $primary;
+  --bs-btn-hover-bg: #{shade-color($primary, 10%)};
+  --bs-btn-hover-border-color: #{shade-color($primary, 10%)};
+  --bs-btn-active-bg: #{shade-color($primary, 20%)};
+  --bs-btn-active-border-color: #{shade-color($primary, 20%)};
+}
+
+.hover-btn .btn-text {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.hover-btn:hover .btn-text {
+  opacity: 1;
+  max-width: 300px;
+}
+
 
 
