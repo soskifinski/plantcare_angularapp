@@ -1,34 +1,51 @@
 <p class="fs-4 text-center">Meine Pflanzen</p>
 
-
 <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-2">
   <ng-container *ngIf="myPlants$ | async as myplants; else noPlants">
     <ng-container *ngIf="myplants.length > 0; else noPlants">
-
       <div class="col" *ngFor="let plant of myplants">
         <div class="card h-100">
           <div class="card-header">
             {{ plant.name }}
           </div>
-          <div class="card-body">
-            <p>{{ plant.lightRequirement }}</p>
+          <div class="card-body">   
             <img
               [src]="'assets/img/' + plant.imageName + '.jpg'"
               alt="{{ plant.name }}"
               class="card-img-bottom"
               (error)="onImgError($event)"
             />
+            <div class="row row-cols-2 g-2">
+              <button class="col"
+                ngClass="btn mt-2 d-flex align-items-center gap-2 hover-btn"
+                (click)="removeFromAccount(plant.id)"
+              >
+                <span class="material-symbols-outlined">delete</span>
+                <span class="btn-text">entfernen</span>
+              </button>
+            </div>
+
+            <!-- plant specific task -->
+            <div>
+                            <button class="col"
+                ngClass="btn btn-outline-secondary mt-2 d-flex align-items-center gap-2 hover-btn"
+                (click)="addTask(plant.id)"
+              >
+                <span class="material-symbols-outlined"> add_task </span>
+                <span class="btn-text">Aufgabe hinzufügen</span>
+              </button>
+              <div>
+
+              </div>
+            </div>
           </div>
         </div>
-      </div>   
+      </div>
     </ng-container>
   </ng-container>
 
-   <ng-template #noPlants>
-        <p class="f4 text-center">Du hast noch keine Pflanzen hinzugefügt.</p>
-    </ng-template>
+  <ng-template #noPlants>
+    <p class="text-center">Du hast noch keine Pflanzen hinzugefügt.</p>
+  </ng-template>
 </div>
 
-
-
-<p class="fs-4 text-center">TO DOs</p>
