@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "PlantCare2": {
+    "PlantCare": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "PlantCare2:build:production"
+              "browserTarget": "PlantCare:build:production"
             },
             "development": {
-              "browserTarget": "PlantCare2:build:development"
+              "browserTarget": "PlantCare:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "PlantCare2:build"
+            "browserTarget": "PlantCare:build"
           }
         },
         "test": {

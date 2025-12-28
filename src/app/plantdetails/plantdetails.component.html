@@ -48,7 +48,7 @@
           <div
             class="card-text"
             disabled
-            *ngIf="!plant.category.toLowerCase()?.includes('zimmerpflanze')"
+            *ngIf="!plant.category.toLowerCase().includes('zimmerpflanze')"
           >
             <span class="material-symbols-outlined" *ngIf="plant.edible"
               >fork_spoon</span
@@ -56,18 +56,21 @@
             <span class="material-symbols-outlined" *ngIf="!plant.edible"
               >no_meals</span
             >
+            <span class="material-symbols-outlined" *ngIf="plant.hardyInWinter">
+              ac_unit
+            </span>
             <span
               class="material-symbols-outlined"
-              *ngIf="plant.hardyInWinter"
+              *ngIf="!plant.hardyInWinter"
             >
-              ac_unit
+              mode_cool_off
             </span>
           </div>
         </div>
 
         <button
           class="btn btn-outline-secondary mt-2 d-flex gap-2 hover-btn"
-          (click)="addButtonClicked(plant)"
+          (click)="addPlant(plant)"
         >
           <span class="material-symbols-outlined">add</span>
           <span class="btn-text">Zu meinen Pflanzen hinzufügen</span>

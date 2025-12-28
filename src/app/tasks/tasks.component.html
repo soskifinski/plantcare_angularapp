@@ -1,0 +1,95 @@
+<div ngClass="container">
+  <h2>Aufgaben</h2>
+
+
+<h3 class="section-title">Heute</h3>
+
+<table class="plants-table">
+  <thead>
+    <tr>
+      <th>Pflanze</th>
+      <th>Aufgabe</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let task of todayTasks$ | async">
+      <td class="plant-cell">
+        <img
+          class="plant-image"
+          [src]="getImageUrl(task.plant)"
+          [alt]="task.plant.name"
+          (error)="onImgError($event)"
+        />
+        <span class="plant-name">{{ task.plant.name }}</span>
+      </td>
+
+      <td class="task-type">
+        {{ task.type }}
+      </td>
+
+      <td class="status-cell">
+        <button class="status-btn" (click)="alterStatus(task)">
+          <span
+            class="material-symbols-outlined done"
+            *ngIf="task.status === true"
+          >
+            task_alt
+          </span>
+
+          <span
+            class="material-symbols-outlined open"
+            *ngIf="task.status === false"
+          >
+            arrow_circle_right
+          </span>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  <h3 class="section-title">Morgen</h3>
+  <table class="plants-table">
+    <tr>
+      <th>Pflanze</th>
+      <th>Aufgabe</th>
+      <th>Status</th>
+    </tr>
+    <tr *ngFor="let task of tomorrowTasks$ | async">
+      <td class="plant-cell">
+        <img
+          style="
+            height: 50px;
+            width: 50px;
+            border-radius: 15px;
+            object-fit: cover;
+          "
+          [src]="getImageUrl(task.plant)"
+          [alt]="task.plant.name"
+          (error)="onImgError($event)"
+        />
+        <p>{{ task.plant.name }}</p>
+      </td>
+      <td>{{ task.type }}</td>
+      <td>{{ task.status ? 'Erledigt' : 'Ausstehend' }}</td>
+    </tr>
+  </table>
+
+  <h3 class="section-title">Darauf folgend</h3>
+  <table class="plants-table">
+    <tr>
+      <th>Datum</th>
+      <th>Pflanze</th>
+      <th>Aufgabe</th>
+      <th>Status</th>
+    </tr>
+    <tr *ngFor="let task of nextTasks$ | async">
+       <td>{{ task.date| date:'dd.MM.yy' }}</td>
+      <td>{{ task.plant.name }}</td>
+      <td>{{ task.status ? 'Erledigt' : 'Ausstehend' }}</td>
+      <td>{{ task.type }}</td>
+    </tr>
+  </table>
+</div>

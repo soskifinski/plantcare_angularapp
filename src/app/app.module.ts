@@ -7,7 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { PlantsComponent } from './plants/plants.component';
 import { AccountComponent } from './account/account.component';
 import { PlantdetailsComponent } from './plantdetails/plantdetails.component';
-import { PlantcaredatesComponent } from './plantcaredates/plantcaredates.component';
+import { TasksComponent } from './tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { PlantcaredatesComponent } from './plantcaredates/plantcaredates.compone
     PlantsComponent,
     AccountComponent,
     PlantdetailsComponent,
-    PlantcaredatesComponent
+    TasksComponent
   ],
   imports: [
     BrowserModule,
