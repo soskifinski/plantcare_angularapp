@@ -1,0 +1,33 @@
+
+<h2>Login</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
+  <!-- EMAIL -->
+  <input
+    type="email"
+    placeholder="E-Mail"
+    formControlName="email"
+  />
+
+  <small *ngIf="loginForm.controls.email.touched &&
+                loginForm.controls.email.invalid">
+    Bitte gültige E-Mail eingeben
+  </small>
+
+  <!-- PASSWORT -->
+  <input
+    type="password"
+    placeholder="Passwort"
+    formControlName="password"
+  />
+
+  <small *ngIf="loginForm.controls.password.touched &&
+                loginForm.controls.password.invalid">
+    Passwort mindestens 8 Zeichen
+  </small>
+
+  <button type="submit">Einloggen</button>
+
+  <p class="error" *ngIf="error">{{ error }}</p>
+
+</form>
