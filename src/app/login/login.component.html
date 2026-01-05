@@ -1,33 +1,54 @@
+<div class="container d-flex flex-column justify-content-center align-items-center vh-50">
+  <h2 class="mb-4">Login</h2>
 
-<h2>Login</h2>
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="login()"
+    class="d-flex flex-column gap-3 w-100"
+    style="max-width: 400px;"
+  >
+    <!-- E-MAIL -->
+    <div class="form-group">
+      <input
+        type="email"
+        placeholder="E-Mail"
+        formControlName="email"
+        class="form-control"
+      />
+      <small
+        *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].invalid"
+        class="text-danger"
+      >
+        Bitte gültige E-Mail eingeben
+      </small>
+    </div>
 
-<form [formGroup]="loginForm" (ngSubmit)="login()" class="login-form">
-  <!-- EMAIL -->
-  <input
-    type="email"
-    placeholder="E-Mail"
-    formControlName="email"
-  />
+    <!-- PASSWORT -->
+    <div class="form-group">
+      <input
+        type="password"
+        placeholder="Passwort"
+        formControlName="password"
+        class="form-control"
+      />
+      <small
+        *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].invalid"
+        class="text-danger"
+      >
+        Passwort mindestens 8 Zeichen
+      </small>
+    </div>
 
-  <small *ngIf="loginForm.controls.email.touched &&
-                loginForm.controls.email.invalid">
-    Bitte gültige E-Mail eingeben
-  </small>
+    <!-- Allgemeiner Login-Fehler -->
+    <div *ngIf="error" class="text-danger text-center">
+      {{ error }}
+    </div>
 
-  <!-- PASSWORT -->
-  <input
-    type="password"
-    placeholder="Passwort"
-    formControlName="password"
-  />
-
-  <small *ngIf="loginForm.controls.password.touched &&
-                loginForm.controls.password.invalid">
-    Passwort mindestens 8 Zeichen
-  </small>
-
-  <button type="submit">Einloggen</button>
-
-  <p class="error" *ngIf="error">{{ error }}</p>
-
-</form>
+    <!-- BUTTON -->
+    <div class="d-flex justify-content-center">
+      <button type="submit" ngClass="btn btn-my-primary">
+        Login
+      </button>
+    </div>
+  </form>
+</div>

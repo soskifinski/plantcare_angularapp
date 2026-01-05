@@ -1,27 +1,26 @@
 import { Component } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/service/auth.service';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  templateUrl: './login.component.html'
 })
 export class LoginComponent {
-
-  error = '';
-
-  loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(8)]]
-  });
+  loginForm: FormGroup;
+  error: string = '';
 
   constructor(
     private fb: FormBuilder,
     private auth: AuthService,
     private router: Router
-  ) {}
+  ) {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
+    });
+  }
 
   login() {
     if (this.loginForm.invalid) {
@@ -31,9 +30,9 @@ export class LoginComponent {
 
     const { email, password } = this.loginForm.value;
 
-    this.auth.login(email!, password!).subscribe({
+    this.auth.login(email, password).subscribe({
       next: () => this.router.navigate(['/account']),
-      error: () => this.error = 'Login fehlgeschlagen'
+      error: () => (this.error = 'Login fehlgeschlagen')
     });
   }
 }
