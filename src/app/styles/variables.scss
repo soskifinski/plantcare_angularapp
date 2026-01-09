@@ -8,6 +8,15 @@
   vertical-align: middle;
 }
 
+//Form Controls Focus Bootstrap Override
+.form-control.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: $primary;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(4, 48, 16, 0.25);
+}
+
 //Text
 .description {
   display: -webkit-box;
@@ -18,17 +27,35 @@
   height: 4.5em;
 }
 
+//Input
+input {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+small {
+  color: #c0392b;
+}
+
+.error {
+  color: red;
+}
+
+
 
 //Buttons
-.btn-bd-primary {
-  --bs-btn-font-weight: 600;
-  --bs-btn-bg: $primary;
-  --bs-btn-border-color: $primary;
-  --bs-btn-hover-bg: #{shade-color($primary, 10%)};
-  --bs-btn-hover-border-color: #{shade-color($primary, 10%)};
-  --bs-btn-active-bg: #{shade-color($primary, 20%)};
-  --bs-btn-active-border-color: #{shade-color($primary, 20%)};
+.btn.btn-my-primary {
+  background-color: $secondary;
+  border-color: $primary;
+  color: white;    
 }
+
+.btn.btn-my-primary:hover {
+  background-color: $primary;
+  border-color: $primary;
+  color: white;    
+}
+
 
 .hover-btn .btn-text {
   opacity: 0;
