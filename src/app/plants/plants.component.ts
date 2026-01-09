@@ -29,9 +29,9 @@ export class PlantsComponent {
       lightRequirement: 'Sonnig',
       leafColor: 'Grün',
       bloomingPeriod: 'Frühling bis Sommer',
-      harvestMonths: new Int16Array([4, 5, 6, 7, 8, 9]),
-      fertilizingCycle: new Int16Array([3, 6]),
-      wateringCycle: new Int16Array([5, 6, 7, 8]),
+      harvestMonths: [4, 5, 6, 7, 8, 9],
+      fertilizingCycle: [3, 6],
+      wateringCycle: [5, 6, 7, 8],
       soilType: 'sandig, trocken'
     },
     {
@@ -47,9 +47,9 @@ export class PlantsComponent {
       lightRequirement: 'Sonnig',
       leafColor: 'Grün',
       bloomingPeriod: 'Frühling',
-      harvestMonths: new Int16Array([5, 6, 7]),
-      fertilizingCycle: new Int16Array([3, 5]),
-      wateringCycle: new Int16Array([4, 5, 6, 7]),
+      harvestMonths: [5, 6, 7],
+      fertilizingCycle: [3, 5],
+      wateringCycle: [4, 5, 6, 7],
       soilType: 'humusreich'
     },
     {
@@ -65,9 +65,9 @@ export class PlantsComponent {
       lightRequirement: 'halbschattig, hell, indirektes Licht',
       leafColor: 'Grün',
       bloomingPeriod: 'Selten',
-      harvestMonths: new Int16Array([]),
-      fertilizingCycle: new Int16Array([4, 6, 8]),
-      wateringCycle: new Int16Array([3, 4, 5, 6, 7, 8, 9]),
+      harvestMonths: [],
+      fertilizingCycle: [4, 6, 8],
+      wateringCycle: [3, 4, 5, 6, 7, 8, 9],
       soilType: 'torfhaltig, gut durchlässig'
     },
     {
@@ -83,9 +83,9 @@ export class PlantsComponent {
       lightRequirement: 'Sonnig',
       leafColor: 'Grün',
       bloomingPeriod: 'Sommer',
-      harvestMonths: new Int16Array([6, 7, 8, 9]),
-      fertilizingCycle: new Int16Array([5, 7]),
-      wateringCycle: new Int16Array([5, 6, 7, 8]),
+      harvestMonths: [6, 7, 8, 9],
+      fertilizingCycle: [5, 7],
+      wateringCycle: [5, 6, 7, 8],
       soilType: 'feucht, gut durchlässig'
     },
     {
@@ -101,9 +101,9 @@ export class PlantsComponent {
       lightRequirement: 'Sonnig bis halbschattig',
       leafColor: 'Grün',
       bloomingPeriod: 'Frühling',
-      harvestMonths: new Int16Array([8]),
-      fertilizingCycle: new Int16Array([3, 6]),
-      wateringCycle: new Int16Array([4, 5, 6, 7, 8]),
+      harvestMonths: [8],
+      fertilizingCycle: [3, 6],
+      wateringCycle: [4, 5, 6, 7, 8],
       soilType: 'nährstoffreich, gut durchlässig'
     },
     {
@@ -119,9 +119,9 @@ export class PlantsComponent {
       lightRequirement: 'Halbschattig',
       leafColor: 'Rot bis orange',
       bloomingPeriod: 'Frühling',
-      harvestMonths: new Int16Array([]),
-      fertilizingCycle: new Int16Array([4]),
-      wateringCycle: new Int16Array([5, 6, 7]),
+      harvestMonths: [],
+      fertilizingCycle: [4],
+      wateringCycle: [5, 6, 7],
       soilType: 'leicht sauer, humusreich'
     },
     {
@@ -137,9 +137,9 @@ export class PlantsComponent {
       lightRequirement: 'Sonnig',
       leafColor: 'Grün',
       bloomingPeriod: 'Frühling',
-      harvestMonths: new Int16Array([6, 7]),
-      fertilizingCycle: new Int16Array([3, 6]),
-      wateringCycle: new Int16Array([4, 5, 6, 7]),
+      harvestMonths: [6, 7],
+      fertilizingCycle: [3, 6],
+      wateringCycle: [4, 5, 6, 7],
       soilType: 'tiefgründig, durchlässig, kalkhaltig'
     },
     {
@@ -155,9 +155,9 @@ export class PlantsComponent {
       lightRequirement: 'Helles, indirektes Licht',
       leafColor: 'Grün mit weißen Punkten',
       bloomingPeriod: 'Frühling bis Herbst',
-      harvestMonths: new Int16Array([]),
-      fertilizingCycle: new Int16Array([4, 6, 8]),
-      wateringCycle: new Int16Array([4, 5, 6, 7, 8]),
+      harvestMonths: [],
+      fertilizingCycle: [4, 6, 8],
+      wateringCycle: [4, 5, 6, 7, 8],
       soilType: 'luftig, leicht feucht'
     },
     {
@@ -173,9 +173,9 @@ export class PlantsComponent {
       lightRequirement: 'Sonnig',
       leafColor: 'Grün',
       bloomingPeriod: 'Sommer',
-      harvestMonths: new Int16Array([5, 6, 7, 8]),
-      fertilizingCycle: new Int16Array([4, 7]),
-      wateringCycle: new Int16Array([5, 6, 7, 8]),
+      harvestMonths: [5, 6, 7, 8],
+      fertilizingCycle: [4, 7],
+      wateringCycle: [5, 6, 7, 8],
       soilType: 'sandig, gut drainiert, kaktuserde'
     },
     {
@@ -191,9 +191,9 @@ export class PlantsComponent {
     lightRequirement: 'Helles, indirektes Licht, Halbschattig',
     leafColor: 'Dunkelgrün',
     bloomingPeriod: 'Selten',
-    harvestMonths: new Int16Array([]),
-    fertilizingCycle: new Int16Array([4, 6, 8]),
-    wateringCycle: new Int16Array([4, 5, 6, 7, 8]),
+    harvestMonths: [],
+    fertilizingCycle: [4, 6, 8],
+    wateringCycle: [4, 5, 6, 7, 8],
     soilType: 'locker, gut durchlässig'
   },
 {
@@ -209,9 +209,9 @@ export class PlantsComponent {
   lightRequirement: 'Halbschattig bis schattig',
   leafColor: 'Dunkelgrün',
   bloomingPeriod: 'Selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 8]),
-  wateringCycle: new Int16Array([3, 5, 7]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 8],
+  wateringCycle: [3, 5, 7],
   soilType: 'gut drainiert, kaktusähnlich'
 },
 {
@@ -227,9 +227,9 @@ export class PlantsComponent {
   lightRequirement: 'Halbschattig',
   leafColor: 'Grün',
   bloomingPeriod: 'Frühling bis Herbst',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 6, 8]),
-  wateringCycle: new Int16Array([4, 5, 6, 7, 8]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 6, 8],
+  wateringCycle: [4, 5, 6, 7, 8],
   soilType: 'feucht, humos, gut durchlässig'
 },
 {
@@ -245,9 +245,9 @@ export class PlantsComponent {
   lightRequirement: 'Indirektes Licht,Halbschattig',
   leafColor: 'Grün',
   bloomingPeriod: 'Sehr selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 6, 8]),
-  wateringCycle: new Int16Array([3, 4, 5, 6, 7, 8, 9]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 6, 8],
+  wateringCycle: [3, 4, 5, 6, 7, 8, 9],
   soilType: 'torfhaltig, durchlässig'
 },
 {
@@ -263,9 +263,9 @@ export class PlantsComponent {
   lightRequirement: 'Sonnig, halbschattig, schattig',
   leafColor: 'Grün mit gelben Rändern',
   bloomingPeriod: 'Selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([3, 7]),
-  wateringCycle: new Int16Array([4, 7]),
+  harvestMonths: [],
+  fertilizingCycle: [3, 7],
+  wateringCycle: [4, 7],
   soilType: 'sandig, kaktusgeeignet'
 },
 {
@@ -281,9 +281,9 @@ export class PlantsComponent {
   lightRequirement: 'Sonnig bis schattig',
   leafColor: 'Graugrün',
   bloomingPeriod: 'Sehr selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([3, 8]),
-  wateringCycle: new Int16Array([14, 21]),
+  harvestMonths: [],
+  fertilizingCycle: [3, 8],
+  wateringCycle: [14, 21],
   soilType: 'kaktusgeeignet, gut durchlässig'
 },
 {
@@ -299,9 +299,9 @@ export class PlantsComponent {
   lightRequirement: 'Schattig',
   leafColor: 'Dunkelgrün, glänzend',
   bloomingPeriod: 'Selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([6, 10]),
-  wateringCycle: new Int16Array([10, 20]),
+  harvestMonths: [],
+  fertilizingCycle: [6, 10],
+  wateringCycle: [10, 20],
   soilType: 'gut durchlässig, leicht sandig'
 },
 {
@@ -317,9 +317,9 @@ export class PlantsComponent {
   lightRequirement: 'Sonnig bis halbschattig',
   leafColor: 'Grün mit weißem Rand',
   bloomingPeriod: 'Frühling bis Herbst',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 8]),
-  wateringCycle: new Int16Array([3, 6]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 8],
+  wateringCycle: [3, 6],
   soilType: 'lockere Blumenerde'
 },
 {
@@ -335,9 +335,9 @@ export class PlantsComponent {
   lightRequirement: 'Sonnig bis halbschattig',
   leafColor: 'Grün',
   bloomingPeriod: 'Selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 7]),
-  wateringCycle: new Int16Array([5, 9]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 7],
+  wateringCycle: [5, 9],
   soilType: 'locker, humos'
 },
 {
@@ -353,9 +353,9 @@ export class PlantsComponent {
   lightRequirement: 'Hell bis halbschattig',
   leafColor: 'Grün',
   bloomingPeriod: 'Frühjahr, jedoch selten im Haus',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 8]),
-  wateringCycle: new Int16Array([5, 10]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 8],
+  wateringCycle: [5, 10],
   soilType: 'palmengeeignete Erde'
 },
 {
@@ -371,9 +371,9 @@ export class PlantsComponent {
   lightRequirement: 'Halbschattig',
   leafColor: 'Hellgrün',
   bloomingPeriod: 'Nicht relevant (sporentragend)',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 8]),
-  wateringCycle: new Int16Array([2, 5]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 8],
+  wateringCycle: [2, 5],
   soilType: 'torfhaltig, locker'
 },
 {
@@ -381,7 +381,7 @@ export class PlantsComponent {
   name: 'Flamingoblume',
   latin: 'Anthurium andraeanum',
   description: 'Dekorative Blüten, benötigt hohe Luftfeuchtigkeit.',
-  imageName: 'anthurium',
+  imageName: 'flamingoblume',
   category: 'Zimmerpflanze',
   poisonous: true,
   edible: false,
@@ -389,9 +389,9 @@ export class PlantsComponent {
   lightRequirement: 'Hell, indirektes Licht',
   leafColor: 'Dunkelgrün, glänzend',
   bloomingPeriod: 'Ganzjährig bei guter Pflege',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 7]),
-  wateringCycle: new Int16Array([4, 7]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 7],
+  wateringCycle: [4, 7],
   soilType: 'orchideengeeignet, luftig'
 },
 {
@@ -399,7 +399,7 @@ export class PlantsComponent {
   name: 'Ficus Benjamini',
   latin: 'Ficus benjamina',
   description: 'Beliebter Zimmerbaum mit feinem Blattwerk, benötigt konstante Bedingungen.',
-  imageName: 'ficus_benjamini',
+  imageName: 'ficusbenjamini',
   category: 'Zimmerpflanze',
   poisonous: true,
   edible: false,
@@ -407,9 +407,9 @@ export class PlantsComponent {
   lightRequirement: 'Hell, indirektes Licht, Schattig',
   leafColor: 'Dunkelgrün',
   bloomingPeriod: 'Sehr selten in Innenräumen',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 8]),
-  wateringCycle: new Int16Array([5, 9]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 8],
+  wateringCycle:[5, 9],
   soilType: 'locker, humos'
 },
 {
@@ -417,7 +417,7 @@ export class PlantsComponent {
   name: 'Korbmarante',
   latin: 'Calathea orbifolia',
   description: 'Dekorative Blätter, benötigt hohe Luftfeuchtigkeit und warmes Klima.',
-  imageName: 'calathea_orbifolia',
+  imageName: 'korbmarante',
   category: 'Zimmerpflanze',
   poisonous: false,
   edible: false,
@@ -425,9 +425,9 @@ export class PlantsComponent {
   lightRequirement: 'Halbschattig',
   leafColor: 'Grün mit silbernen Streifen',
   bloomingPeriod: 'Selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 7]),
-  wateringCycle: new Int16Array([3, 5]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 7],
+  wateringCycle: [3, 5],
   soilType: 'torfhaltig, locker'
 },
 {
@@ -435,7 +435,7 @@ export class PlantsComponent {
   name: 'Pfeilblatt',
   latin: 'Alocasia amazonica',
   description: 'Exotische Pflanze mit kontrastreichen, pfeilförmigen Blättern.',
-  imageName: 'alocasia_amazonica',
+  imageName: 'pfeilblatt',
   category: 'Zimmerpflanze',
   poisonous: true,
   edible: false,
@@ -443,9 +443,9 @@ export class PlantsComponent {
   lightRequirement: 'Halbschattig',
   leafColor: 'Dunkelgrün mit weißen Adern',
   bloomingPeriod: 'Selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 7]),
-  wateringCycle: new Int16Array([4, 7]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 7],
+  wateringCycle: [4, 7],
   soilType: 'leicht sauer, humos'
 },
 {
@@ -453,7 +453,7 @@ export class PlantsComponent {
   name: 'Zwergpfeffer',
   latin: 'Peperomia obtusifolia',
   description: 'Kompakte, pflegeleichte Zimmerpflanze, ideal für kleine Räume.',
-  imageName: 'peperomia_obtusifolia',
+  imageName: 'zwergpfeffer',
   category: 'Zimmerpflanze',
   poisonous: true,
   edible: false,
@@ -461,9 +461,9 @@ export class PlantsComponent {
   lightRequirement: 'Hell bis halbschattig',
   leafColor: 'Dunkelgrün, fleischig',
   bloomingPeriod: 'Sommer',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([5, 9]),
-  wateringCycle: new Int16Array([5, 10]),
+  harvestMonths: [],
+  fertilizingCycle: [5, 9],
+  wateringCycle: [5, 10],
   soilType: 'locker, leicht sandig'
 },
 {
@@ -479,9 +479,9 @@ export class PlantsComponent {
   lightRequirement: 'Halbschattig',
   leafColor: 'Dunkelgrün mit weißen Adern',
   bloomingPeriod: 'Ganzjährig möglich',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 7]),
-  wateringCycle: new Int16Array([4, 7]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 7],
+  wateringCycle: [4, 7] ,
   soilType: 'luftig, orchideengeeignet'
 },
 {
@@ -497,9 +497,9 @@ export class PlantsComponent {
   lightRequirement: 'Halbschattig',
   leafColor: 'Grün',
   bloomingPeriod: 'Sehr selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 7]),
-  wateringCycle: new Int16Array([4, 8]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 7],
+  wateringCycle: [4, 8],
   soilType: 'bonsaigeeignet'
 },
 {
@@ -515,9 +515,9 @@ export class PlantsComponent {
   lightRequirement: 'Hell bis halbschattig',
   leafColor: 'Grün',
   bloomingPeriod: 'Selten',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 8]),
-  wateringCycle: new Int16Array([5, 9]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 8],
+  wateringCycle: [5, 9],
   soilType: 'lockere Blumenerde'
 },
 {
@@ -533,9 +533,9 @@ export class PlantsComponent {
   lightRequirement: 'Sonnig',
   leafColor: 'Hellgrün, fleischig',
   bloomingPeriod: 'Winter bis Frühling',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([4, 8]),
-  wateringCycle: new Int16Array([10, 20]),
+  harvestMonths: [],
+  fertilizingCycle: [4, 8],
+  wateringCycle: [10, 20],
   soilType: 'sukkulentengeeignet'
 },
 {
@@ -551,9 +551,9 @@ export class PlantsComponent {
   lightRequirement: 'Halbschattig',
   leafColor: 'Dunkelgrün, weich',
   bloomingPeriod: 'Ganzjährig bei guter Pflege',
-  harvestMonths: new Int16Array([]),
-  fertilizingCycle: new Int16Array([3, 7]),
-  wateringCycle: new Int16Array([3, 6]),
+  harvestMonths: [],
+  fertilizingCycle: [3, 7],
+  wateringCycle: [3, 6],
   soilType: 'leicht sauer, locker'
 }
 
