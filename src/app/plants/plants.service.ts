@@ -11,6 +11,10 @@ export class PlantService {
 
   constructor() {}
 
+   getAll(): IPlant[]  {
+    return  this.Plants.value;
+  }
+
   getPlantById(id:number): IPlant | null {
     return  this.Plants.value.find((p) => p.id === id) || null;
   }

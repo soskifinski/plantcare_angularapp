@@ -9,6 +9,8 @@ import { ITask } from '../tasks/task.model';
 import { TaskService } from '../tasks/task.service';
 import { Observable } from 'rxjs';
 import { onImgError, getImageUrl } from '../shared/imagehelper';
+import { MatDialog } from '@angular/material/dialog';
+import { TaskdialogComponent } from '../taskdialog/taskdialog.component';
 
 @Component({
   selector: 'app-account',
@@ -19,6 +21,7 @@ export class AccountComponent {
   myPlants$: Observable<IPlant[]>;
 
   constructor(
+    private dialog: MatDialog,
     private accountService: AccountService,
     private taskService: TaskService,
     private plantService: PlantService
@@ -36,22 +39,28 @@ export class AccountComponent {
   }
 
   addTask(plantId: number): void {
-    const newTask: ITask = {
-      id: Date.now(),
-      account: this.accountService.getCurrentAccount() as IAccount,
-      accountId: this.accountService.getCurrentAccountId(),
-      plant: this.plantService.getPlantById(plantId) as IPlant,
-      plantId: plantId,
-      rhythm: Rhythm.DAILY,
-      status: false,
-      type: TaskType.WATER,
-      lastCompletedOn: null as any,
-      date: new Date(),
-      nextDueOn: null as any,
-      createdOn: new Date(),
-      updatedOn: null as any,
-    };
-    this.taskService.add(newTask);
-    console.log('Aufgabe für Pflanze (Id)', plantId, 'wurde erstellt');
+    const dialogRef = this.dialog.open(TaskdialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (!result) return;
+
+      const newTask: ITask = {
+        id: Date.now(),
+        account: this.accountService.getCurrentAccount()!,
+        accountId: this.accountService.getCurrentAccountId(),
+        plant: this.plantService.getPlantById(plantId)!,
+        plantId: plantId,
+        rhythm: result.rhythm,
+        status: false,
+        type: result.taskType,
+        nextDueOn: result.date,     
+        createdOn: new Date(),
+        lastCompletedOn: null,
+        updatedOn: null,
+      };
+
+      this.taskService.add(newTask);
+      console.log('Aufgabe erstellt:', newTask);
+    });
   }
 }

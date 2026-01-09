@@ -1,5 +1,6 @@
 @import './colors';
 
+
 //Images
 .fixed-image {
   height: 200px; 
@@ -17,14 +18,22 @@
     box-shadow: 0 0 0 .25rem rgba(4, 48, 16, 0.25);
 }
 
-//Text
-.description {
-  display: -webkit-box;
-  -line-clamp: 3;        
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 4.5em;
+//Form Controls Focus Bootstrap Override
+.form-control.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: $primary;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(4, 48, 16, 0.25);
+}
+
+.img-bg {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 20px; 
+    z-index: -1;
 }
 
 //Input
@@ -42,20 +51,18 @@ small {
 }
 
 
-
 //Buttons
 .btn.btn-my-primary {
-  background-color: $secondary;
-  border-color: $primary;
-  color: white;    
-}
-
-.btn.btn-my-primary:hover {
   background-color: $primary;
   border-color: $primary;
   color: white;    
 }
 
+.btn.btn-my-primary:hover {
+  background-color: $secondary;
+  border-color: $primary;
+  color: $primary;    
+}
 
 .hover-btn .btn-text {
   opacity: 0;
@@ -71,8 +78,9 @@ small {
 }
 
 .section-title {
-  margin-bottom: 1rem;
-  font-weight: 500;
+  margin-top: 1rem;
+  font-weight: 23;
+  font-size: 1em;
 }
 
 /* Table Grundlayout */
@@ -80,7 +88,7 @@ small {
   width: 100%;
   border-collapse: collapse;
   background: #fff;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -163,7 +171,6 @@ small {
 .status-btn:hover {
   transform: scale(1.1);
 }
-
 
 
 

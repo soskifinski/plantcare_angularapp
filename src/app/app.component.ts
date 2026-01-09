@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AccountService } from './account/account.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,14 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'PlantCare';
+ isLoggedIn = false;  
+  constructor(private accountService: AccountService) {
+
+
+    this.isLoggedIn = this.accountService.getCurrentAccount() !== null;
+  }
+
+  ngOnInit(): void {
+    
+  }
 }

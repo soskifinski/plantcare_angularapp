@@ -13,6 +13,8 @@ import { AccountComponent } from './account/account.component';
 import { PlantdetailsComponent } from './plantdetails/plantdetails.component';
 import { LoginComponent } from './login/login.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { TaskdialogComponent } from './taskdialog/taskdialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,15 @@ import { TasksComponent } from './tasks/tasks.component';
     AccountComponent,
     PlantdetailsComponent,
     LoginComponent,
-    TasksComponent
+    TasksComponent,
+    TaskdialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule 
+    HttpClientModule ,
+    BrowserAnimationsModule
   ],
   providers: [
   {

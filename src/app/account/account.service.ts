@@ -2,17 +2,24 @@ import { Injectable } from '@angular/core';
 import { IPlant } from '../plants/plant.model';
 import { IAccount } from './account.model';
 import { BehaviorSubject } from 'rxjs';
+import { MOCK_PLANTS } from '../plants/plant.mock';
+import { PlantService } from '../plants/plants.service';
 
 @Injectable({
   providedIn: 'root',
 })
+
+
 export class AccountService {
-  private myPlantsSubject = new BehaviorSubject<IPlant[]>([]);
+  private myPlantsSubject = new BehaviorSubject<IPlant[]>(MOCK_PLANTS);
   myPlants$ = this.myPlantsSubject.asObservable();
   private currentAccount: IAccount | null = null;
+  isLoggedIn = this.currentAccount !== null;
 
-  constructor() {}
+  constructor(private plantService: PlantService) {}
   getCurrentAccount(): IAccount | null {
+
+    
     return this.currentAccount;
   }
   getCurrentAccountId(): number {
@@ -21,7 +28,11 @@ export class AccountService {
   }
 
   setCurrentAccountId(id: number): void {
+    const plants = this.plantService.getAll();
+
     this.currentAccount = { id, userEmail: '', passwordHash: '', plants: [] };
+
+    this.myPlantsSubject.next(plants);
   }
 
   add(plant: IPlant): boolean {
