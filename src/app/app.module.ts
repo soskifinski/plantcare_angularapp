@@ -11,9 +11,10 @@ import { HomeComponent } from './home/home.component';
 import { PlantsComponent } from './plants/plants.component';
 import { AccountComponent } from './account/account.component';
 import { PlantdetailsComponent } from './plantdetails/plantdetails.component';
-import { PlantcaredatesComponent } from './plantcaredates/plantcaredates.component';
 import { LoginComponent } from './login/login.component';
-
+import { TasksComponent } from './tasks/tasks.component';
+import { TaskdialogComponent } from './taskdialog/taskdialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,14 +23,16 @@ import { LoginComponent } from './login/login.component';
     PlantsComponent,
     AccountComponent,
     PlantdetailsComponent,
-    PlantcaredatesComponent,
-    LoginComponent
+    LoginComponent,
+    TasksComponent,
+    TaskdialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule 
+    HttpClientModule ,
+    BrowserAnimationsModule
   ],
   providers: [
   {

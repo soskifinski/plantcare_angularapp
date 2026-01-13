@@ -1,6 +1,6 @@
 // Primary Colors
 $primary: #3e6606;
-$secondary: #6c757d;
+$secondary: #e7ffc5;
 
 // Message
 $success: #198754;
@@ -10,3 +10,21 @@ $warning: #f3c81a;
 //Costum
 $light-green: #e1ecbb;
 $soil-brown: #d68c45;
+
+.primary-bg{
+  background-color: $primary !important;
+}
+.secondary-bg{
+  background-color: $secondary !important;
+}
+
+.white-text{
+  color: white !important;
+}
+
+.primary-text{
+  color: $primary !important;
+}
+.secondary-text{
+  color: $secondary !important;
+}

@@ -14,24 +14,42 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     rel="stylesheet"
   />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 </head>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <nav class="navbar bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img
-            src="assets/img/logo.jpg"
-            alt="PlantCare"
-            height="30"
-            class="d-inline-block align-text-center"
-          />
-          Plant Care
-        </a>
-      </div>
-    </nav>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary mb-3 primary-bg white-text">
+  <div class="container-fluid ">
+    <!-- Brand -->
+    <a class="my-navbar-brand" routerLink="/home">
+      <img
+        src="assets/img/logo.jpg"
+        alt="PlantCare"
+        height="30"
+        class="d-inline-block align-text-center"
+      />
+      Plant Care
+    </a>
+
+    <!-- Burger Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse white-text" id="navbarSupportedContent">
+      <ul class="navbar-nav navbar-dark me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" routerLink="/home" routerLinkActive="active"
             >Home</a
@@ -42,19 +60,17 @@
             >Pflanzen</a
           >
         </li>
-        <li class="nav-item">
+        
+      </ul>
+
+       <span class="nav-item">
           <a class="nav-link" routerLink="/login" routerLinkActive="active"
             >Login</a
           >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/account" routerLinkActive="active" 
-            >Mein Account</a
-          >
-        </li>
-
-        
-      </ul>
+          <a class="nav-link" routerLink="/account" routerLinkActive="active">
+            Mein Account
+          </a>
+        </span>
     </div>
   </div>
 </nav>

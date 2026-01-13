@@ -11,8 +11,8 @@ export interface IPlant{
     lightRequirement: string;
     leafColor: string;
     bloomingPeriod: string;
-    harvestMonths: Int16Array;
-    fertilizingCycle: Int16Array;
-    wateringCycle: Int16Array
+    harvestMonths: number[];
+    fertilizingCycle: number[];
+    wateringCycle: number[]
     soilType: string;
 }

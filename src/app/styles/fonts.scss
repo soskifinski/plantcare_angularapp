@@ -1,0 +1,36 @@
+body {  font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.cormorant {
+  font-family: "Cormorant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.my-navbar-brand {
+    font-family: "Helvetica Neue", serif;
+    color: #e7ffc5 !important;
+    display: inline-block;
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+
+.description {
+  display: -webkit-box;
+  -line-clamp: 3;        
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 4.5em;
+}
